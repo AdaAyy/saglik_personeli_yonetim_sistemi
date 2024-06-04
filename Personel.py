@@ -32,4 +32,4 @@ class Personel:
         self.__maas = yeni_deger
 
     def __str__(self):
-        return f"Ad:{self.__ad}\nSoyad:{self.__soyad}\nPersonel No:{self.__personel_no}\nDepartman:{self.__departman}\nMaaş:{self.__maas}"
+        return f"Ad:{self.__ad},Soyad:{self.__soyad},Personel No:{self.__personel_no},Departman:{self.__departman},Maaş:{self.__maas}"
