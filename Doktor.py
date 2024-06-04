@@ -23,7 +23,7 @@ class Doktor(Personel):
         self.__hastane = yeni_deger
 
     def __str__(self):
-        return f"{super().__str__()}\nUzmanlık:{self.__uzmanlik}\nDeneyim Yılı:{self.__deneyim_yili}\nHastane Adı:{self.__hastane}"
+        return f"{super().__str__()},Uzmanlık:{self.__uzmanlik},Deneyim Yılı:{self.__deneyim_yili},Hastane Adı:{self.__hastane}"
 
     def maas_arttir(self, yuzde):
         self.set_maas(self.get_maas()*(1 + yuzde/100))
