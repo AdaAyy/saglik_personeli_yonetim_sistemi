@@ -38,7 +38,7 @@ class Hasta:
         self.__tedavi = yeni_deger
 
     def __str__(self):
-        return f"Ad:{self.__ad}\nSoyad:{self.__soyad}\nHasta No:{self.__hasta_no}\nDoğum Tarihi:{self.__dogum_tarihi}\nHastalık:{self.__hastalik}\nTedavi:{self.__tedavi}"
+        return f"Ad:{self.__ad},Soyad:{self.__soyad},Hasta No:{self.__hasta_no},Doğum Tarihi:{self.__dogum_tarihi},Hastalık:{self.__hastalik},Tedavi:{self.__tedavi}"
 
     def tedavi_suresi_hesapla(self):
         if self.__hastalik == "Alerji":
