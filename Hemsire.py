@@ -24,7 +24,7 @@ class Hemsire(Personel):
 
 
     def __str__(self):
-        return f"{super().__str__()}\nÇalışma Saati:{self.__calisma_saati}\nSertifika:{self.__sertifika}\nHastane Adı:{self.__hastane}"
+        return f"{super().__str__()},Çalışma Saati:{self.__calisma_saati},Sertifika:{self.__sertifika},Hastane Adı:{self.__hastane}"
 
     def maas_arttir(self, yuzde):
         self.set_maas(self.get_maas()*(1 + yuzde/100))
