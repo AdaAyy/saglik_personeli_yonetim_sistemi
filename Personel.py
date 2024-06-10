@@ -1,3 +1,4 @@
+#Personel sınfını oluşturma
 class Personel:
     def __init__(self, personel_no, ad, soyad, departman, maas):
         self.__personel_no = personel_no
@@ -6,6 +7,7 @@ class Personel:
         self.__departman = departman
         self.__maas = maas
 
+    #Accesor/Mutator metodları
     def get_personel_no(self):
         return self.__personel_no
     def set_personel_no(self, yeni_deger):
@@ -25,11 +27,11 @@ class Personel:
         return self.__departman
     def set_departman(self, yeni_deger):
         self.__departman = yeni_deger
-
     def get_maas(self):
         return self.__maas
     def set_maas(self, yeni_deger):
         self.__maas = yeni_deger
+        return yeni_deger
 
     def __str__(self):
-        return f"Ad:{self.__ad},Soyad:{self.__soyad},Personel No:{self.__personel_no},Departman:{self.__departman},Maaş:{self.__maas}"
+        return f"Ad:{self.__ad}\nSoyad:{self.__soyad}\nPersonel_No:{int(self.__personel_no)}\nDepartman:{self.__departman}\nMaaş:{self.__maas}"
