@@ -1,3 +1,4 @@
+#Hasta sınıfını oluşturma
 class Hasta:
     def __init__(self, hasta_no, ad, soyad, dogum_tarihi, hastalik, tedavi):
         self.__hasta_no = hasta_no
@@ -7,6 +8,7 @@ class Hasta:
         self.__hastalik = hastalik
         self.__tedavi = tedavi
 
+    #Accessor/Mutator metodları
     def get_hasta_no(self):
         return self.__hasta_no
     def set_hasta_no(self, yeni_deger):
@@ -38,8 +40,9 @@ class Hasta:
         self.__tedavi = yeni_deger
 
     def __str__(self):
-        return f"Ad:{self.__ad}\nSoyad:{self.__soyad}\nHasta No:{self.__hasta_no}\nDoğum Tarihi:{self.__dogum_tarihi}\nHastalık:{self.__hastalik}\nTedavi:{self.__tedavi}"
+        return f"Ad:{self.__ad}\nSoyad:{self.__soyad}\nHasta_No:{int(self.__hasta_no)}\nDoğum_Tarihi:{int(self.__dogum_tarihi)}\nHastalık:{self.__hastalik}\nTedavi:{self.__tedavi}"
 
+    #Tedavi süresini hesaplayan fonksiyon
     def tedavi_suresi_hesapla(self):
         if self.__hastalik == "Alerji":
             sure1 = 3
