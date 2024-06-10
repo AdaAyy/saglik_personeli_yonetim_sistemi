@@ -1,5 +1,6 @@
 from Personel import Personel
 
+#Personel sınıfından kalıtılan doktor sınıfını oluşturma
 class Doktor(Personel):
     def __init__(self, personel_no, ad, soyad, departman, maas, uzmanlik, deneyim_yili, hastane):
         super().__init__(personel_no, ad, soyad, departman, maas)
@@ -7,6 +8,7 @@ class Doktor(Personel):
         self.__deneyim_yili = deneyim_yili
         self.__hastane = hastane
 
+    #Accessor/Mutator metodları
     def get_uzmanlik(self):
         return self.__uzmanlik
     def set_uzmanlik(self, yeni_deger):
@@ -23,7 +25,8 @@ class Doktor(Personel):
         self.__hastane = yeni_deger
 
     def __str__(self):
-        return f"{super().__str__()}\nUzmanlık:{self.__uzmanlik}\nDeneyim Yılı:{self.__deneyim_yili}\nHastane Adı:{self.__hastane}"
+        return f"{super().__str__()}\nUzmanlık:{self.__uzmanlik}\nDeneyim_Yılı:{self.__deneyim_yili}\nHastane_Adı:{self.__hastane}"
 
+    #Maaş arttırma fonksiyonu
     def maas_arttir(self, yuzde):
         return self.set_maas(self.get_maas()*(1 + yuzde/100))
