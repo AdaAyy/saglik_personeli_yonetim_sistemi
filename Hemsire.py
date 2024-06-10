@@ -1,5 +1,6 @@
 from Personel import Personel
 
+#Personel sınıfından kalıtılan hemşire sınıfını oluşturma
 class Hemsire(Personel):
     def __init__(self, personel_no, ad, soyad, departman, maas, calisma_saati, sertifika, hastane):
         super().__init__(personel_no, ad, soyad, departman, maas)
@@ -7,6 +8,7 @@ class Hemsire(Personel):
         self.__sertifika = sertifika
         self.__hastane = hastane
 
+    #Accessor/Mutator metodları
     def get_calisma_saati(self):
         return self.__calisma_saati
     def set_calisma_saati(self, yeni_deger):
@@ -24,7 +26,8 @@ class Hemsire(Personel):
 
 
     def __str__(self):
-        return f"{super().__str__()}\nÇalışma Saati:{self.__calisma_saati}\nSertifika:{self.__sertifika}\nHastane Adı:{self.__hastane}"
+        return f"{super().__str__()}\nÇalışma_Saati:{self.__calisma_saati}\nSertifika:{self.__sertifika}\nHastane_Adı:{self.__hastane}"
 
+    #Maaş arttırma fonksiyonu
     def maas_arttir(self, yuzde):
-       return self.set_maas(self.get_maas()*(1 + yuzde/100))
+        return self.set_maas(self.get_maas()*(1 + yuzde/100))
